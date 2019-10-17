@@ -2,6 +2,13 @@
 	margin: 0px;
 	padding: 0px;
 }
-div{
-	background-color: aqua;
-}
+#head{
+	width: auto;
+	height: 100px;
+	}
+#head li{
+	float: left; 
+	list-style: none;
+	margin-right: 20px;
+	}
+	
