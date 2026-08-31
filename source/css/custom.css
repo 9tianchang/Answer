@@ -1,0 +1,19 @@
+:root {
+  --theme: #5b66f2;
+  --theme-a10: rgba(91, 102, 242, 0.1);
+  --theme-a20: rgba(91, 102, 242, 0.2);
+}
+
+.l_left .header .logo-wrap .title {
+  letter-spacing: -0.02em;
+}
+
+.post-list .post-card,
+.widget-wrapper {
+  backdrop-filter: saturate(120%);
+}
+
+article.md-text a:not(.tag-plugin) {
+  text-decoration-color: var(--theme-a20);
+  text-underline-offset: 0.2em;
+}

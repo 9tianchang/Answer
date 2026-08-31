@@ -1,0 +1,19 @@
+welcome:
+  layout: markdown
+  title: 你好，我是天长
+  content: |
+    这里记录技术实践、生活观察，以及那些值得反复思考的问题。
+
+    [GitHub](https://github.com/9tianchang) · [进入写作后台](/Answer/admin/)
+
+recent:
+  layout: recent
+  rss: /Answer/atom.xml
+  limit: 8
+
+timeline:
+  layout: timeline
+  title: 最近更新
+  api: https://api.github.com/repos/9tianchang/Answer/commits
+  type: timeline
+  limit: 8

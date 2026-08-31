@@ -1,0 +1,63 @@
+title: 天长的答案
+subtitle: 记录技术、生活与持续思考
+description: 在代码、书与日常之间，寻找值得长期记录的答案。
+keywords: 天长,个人博客,技术,生活,笔记
+author: 天长
+language: zh-CN
+timezone: Asia/Shanghai
+
+url: https://9tianchang.github.io/Answer
+root: /Answer/
+permalink: posts/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+  - admin/**
+
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+per_page: 10
+pagination_dir: page
+
+theme: stellar
+
+meta_generator: true
+updated_option: mtime
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+use_date_for_updated: false
+
+deploy:
+  type: ''

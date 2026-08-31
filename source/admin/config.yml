@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms@0.187.0/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: 9tianchang/Answer
+  branch: hexo
+  auth_methods: [token]
+  commit_messages:
+    create: '发布文章「{{slug}}」'
+    update: '更新文章「{{slug}}」'
+    delete: '删除文章「{{slug}}」'
+
+site_url: https://9tianchang.github.io/Answer/
+display_url: https://9tianchang.github.io/Answer/
+logo_url: https://9tianchang.github.io/Answer/images/og.png
+locale: zh_Hans
+media_folder: source/images/uploads
+public_folder: /Answer/images/uploads
+
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    description: 新建、编辑和发布博客文章；保存后会自动更新网站。
+    folder: source/_posts
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    preview_path: 'posts/{{slug}}/'
+    summary: '{{title}} · {{date}}'
+    sortable_fields: [date, title, categories]
+    fields:
+      - { name: title, label: 标题, widget: string }
+      - name: date
+        label: 发布时间
+        widget: datetime
+        default: '{{now}}'
+        format: 'YYYY-MM-DD HH:mm:ss'
+      - name: categories
+        label: 分类
+        widget: select
+        multiple: true
+        options: [技术笔记, 生活随笔, 效率方法, 读书观影]
+        default: [生活随笔]
+      - name: tags
+        label: 标签
+        widget: list
+        required: false
+        field: { name: tag, label: 标签, widget: string }
+      - name: excerpt
+        label: 摘要
+        widget: text
+        hint: 显示在首页文章卡片中，建议控制在 80 字以内。
+      - { name: cover, label: 封面图, widget: image, required: false }
+      - { name: published, label: 立即发布, widget: boolean, default: true }
+      - { name: body, label: 正文, widget: richtext }
+
+  - name: settings
+    label: 网站设置
+    files:
+      - name: home
+        label: 首页与站点信息
+        file: source/_data/home.json
+        format: json
+        fields:
+          - { name: title, label: 网站名称, widget: string }
+          - { name: subtitle, label: 网站副标题, widget: string }
+          - { name: description, label: 网站简介, widget: text }
+          - { name: author, label: 作者名称, widget: string }
+          - { name: welcome_title, label: 首页欢迎标题, widget: string }
+          - { name: welcome_text, label: 首页欢迎文字, widget: text }
+          - { name: github_url, label: GitHub 地址, widget: string }
+          - { name: footer_text, label: 页脚文字, widget: string }
+      - name: about
+        label: 关于页面
+        file: source/about/index.md
+        format: yaml-frontmatter
+        fields:
+          - { name: title, label: 页面标题, widget: string }
+          - { name: date, label: 更新时间, widget: datetime, format: 'YYYY-MM-DD HH:mm:ss' }
+          - { name: layout, label: 页面布局, widget: hidden, default: page }
+          - { name: body, label: 页面内容, widget: richtext }

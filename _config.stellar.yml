@@ -1,0 +1,97 @@
+logo:
+  avatar: https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg
+  title: 天长的答案
+  subtitle: 9TIANCHANG · BLOG
+
+open_graph:
+  enable: true
+  twitter_id:
+
+article:
+  type: tech
+  card_style: classic
+  auto_excerpt: 180
+  reading_time: true
+  card_tags: true
+  category_color:
+    技术笔记: '#5b66f2'
+    生活随笔: '#31b88a'
+    效率方法: '#e29b3f'
+    读书观影: '#a36ff2'
+
+menubar:
+  items:
+    - id: home
+      theme: '#5b66f2'
+      icon: default:home
+      title: 首页
+      url: /
+    - id: posts
+      theme: '#5b66f2'
+      icon: default:documents
+      title: 文章
+      url: /archives/
+    - id: categories
+      theme: '#31b88a'
+      icon: default:category
+      title: 分类
+      url: /categories/
+    - id: about
+      theme: '#a36ff2'
+      icon: default:shield-user
+      title: 关于
+      url: /about/
+    - id: admin
+      theme: '#e29b3f'
+      icon: default:edit
+      title: 写作
+      url: /admin/
+
+site_tree:
+  home:
+    leftbar: welcome, recent
+    rightbar: timeline
+  index_blog:
+    leftbar: welcome, recent
+    rightbar: timeline
+  post:
+    leftbar: recent
+    rightbar: toc
+  page:
+    leftbar: recent
+    rightbar: toc
+
+footer:
+  social:
+    github:
+      icon: default:github
+      url: https://github.com/9tianchang
+  content: 本站由 Hexo 与 Stellar 驱动
+
+inject:
+  head:
+    - <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    - <link rel="preconnect" href="https://fonts.googleapis.com">
+    - <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    - <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    - <link rel="stylesheet" href="/Answer/css/custom.css">
+
+dependencies:
+  marked: https://cdn.jsdelivr.net/npm/marked@13.0.3/lib/marked.umd.min.js
+  lazyload:
+    js: https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js
+
+style:
+  font-family:
+    body: '"DM Sans", "Noto Sans SC", system-ui, sans-serif'
+  border-radius:
+    card-l: 20px
+    card: 16px
+    card-s: 12px
+    bar: 12px
+    image-l: 18px
+    image: 14px
+    image-s: 10px
+
+comments:
+  service:
