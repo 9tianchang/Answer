@@ -23,7 +23,7 @@ menubar:
   items:
     - id: home
       theme: '#5b66f2'
-      icon: default:home
+      icon: default:fire
       title: 首页
       url: /
     - id: posts
@@ -49,11 +49,11 @@ menubar:
 
 site_tree:
   home:
-    leftbar: welcome, recent
-    rightbar: timeline
+    leftbar: welcome
+    rightbar: recent
   index_blog:
-    leftbar: welcome, recent
-    rightbar: timeline
+    leftbar: welcome
+    rightbar: recent
   post:
     leftbar: recent
     rightbar: toc
