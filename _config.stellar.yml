@@ -9,6 +9,7 @@ open_graph:
 
 article:
   type: tech
+  pin_style: flat
   card_style: classic
   auto_excerpt: 180
   reading_time: true

@@ -53,6 +53,11 @@ collections:
         widget: text
         hint: 显示在首页文章卡片中，建议控制在 80 字以内。
       - { name: cover, label: 封面图, widget: image, required: false }
+      - name: pin
+        label: 首页置顶
+        widget: boolean
+        default: false
+        hint: 开启后，这篇文章会排在首页最前面；建议只置顶一篇。
       - { name: published, label: 立即发布, widget: boolean, default: true }
       - { name: body, label: 正文, widget: richtext }
 
