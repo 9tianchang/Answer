@@ -17,3 +17,27 @@ article.md-text a:not(.tag-plugin) {
   text-decoration-color: var(--theme-a20);
   text-underline-offset: 0.2em;
 }
+
+.post-list:empty {
+  min-height: 240px;
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  padding: 32px;
+  border: 1px dashed var(--block-border);
+  border-radius: 18px;
+  color: var(--text-p2);
+  text-align: center;
+}
+
+.post-list:empty::before {
+  content: '还没有文章';
+  color: var(--text-p1);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.post-list:empty::after {
+  content: '新的记录会出现在这里，也可以从左侧“写作”进入后台。';
+  font-size: 0.9rem;
+}
