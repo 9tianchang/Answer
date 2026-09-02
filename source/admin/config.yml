@@ -12,7 +12,6 @@ backend:
 
 site_url: https://9tianchang.github.io/Answer/
 display_url: https://9tianchang.github.io/Answer/
-logo_url: https://9tianchang.github.io/Answer/images/og.png
 locale: zh_Hans
 media_folder: source/images/uploads
 public_folder: /Answer/images/uploads

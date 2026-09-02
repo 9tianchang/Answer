@@ -95,4 +95,15 @@ style:
     image-s: 10px
 
 comments:
-  service:
+  service: beaudar
+  comment_title: 欢迎登录 GitHub 参与讨论
+  beaudar:
+    repo: 9tianchang/blog-comments
+    issue-term: pathname
+    theme: preferred-color-scheme
+    label: 评论
+    input-position: top
+    comment-order: desc
+    keep-theme: true
+    loading: false
+    branch: main
